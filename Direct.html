@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct</title>
+    <link rel="stylesheet" href="harry1.css">
+    <link rel="stylesheet" href="List.html">
+    <link rel="stylesheet" href="menustyle.css">
+    <script>
+      function myfunction()
+      {
+       var un=document.forms["myforms"]["Rank"].value;
+       var loc=document.forms["myforms"]["location"].value;
+      if (un<= 100 && loc=="Pune") {
+        window.location.href="List.html";
+      } 
+      if (un>= 100 && un < 200 && loc=="Pune") {
+        window.location.href="list2.html";
+      }
+      if (un>= 201 && un < 300 && loc=="Pune") {
+        window.location.href="list3.html";
+      }
+      if (un>= 301 && un < 400 && loc=="Pune") {
+        window.location.href="list4.html";
+      }
+      if (un>= 401 && un < 500 && loc=="Pune") {
+        window.location.href="list5.html";
+      }
+      
+  
+       }
+    </script>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+       College Predictor
+    </div>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+    <i class="fas fa-bars"></i>
+    </label>
+    <ul>
+       <li><a class="active" href="#">Home</a></li>
+       <li><a href="#">Login</a></li>
+       <li><a href="#">Sign-Up</a></li>
+       <li><a href="#">About Us</a></li>
+       <li><a href="#">Feedback</a></li>
+    </ul>
+ </nav>
+ <div class="content">
+    <div>
+       
+    </div>
+    <div>
+
+    </div>
+ </div>
+  <div class="Direct">
+    <form class="Direct1" name="myforms" method="POST">
+          <h1 class="heading">Details</h1>
+            <label for="Entrance"><b>Entrance Given</b></label>
+            <select class="select" id="Entrance">
+            <option value="NEET">MH-CET</option>
+            <option value="cet">JEE</option>
+            <option value="pcet">PERA-CET</option>
+            </select>
+            <label for="location"><b>Location</b></label>
+            <input type="text" placeholder="Enter Location" name="location" required>
+            <label for="Rank"><b>Rank</b></label>
+            <input type="number" placeholder="Enter Your Rank" name="Rank" required>
+            <input type="button" id="logbutton" value="Proceed" onclick= myfunction() class="btn">
+    </form>
+  </div>
+</body>
+</html>
